@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Simple Canvas App</title>
+	<style>
+		canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>Sign below</h3>
+	<canvas id="canvas" width="400" height="400"></canvas>
+	<script>
+		const canvas = document.getElementById('canvas');
+		const ctx = canvas.getContext('2d');
+		let painting = false;
+
+		// Event listener to start drawing when the mouse is clicked
+		canvas.addEventListener('mousedown', () => {
+			painting = true;
+		});
+
+		// Event listener to stop drawing when the mouse is released
+		canvas.addEventListener('mouseup', () => {
+			painting = false;
+			ctx.beginPath();
+		});
+
+		// Event listener to draw when the mouse is moved while clicked
+		canvas.addEventListener('mousemove', draw);
+
+		// Function to draw on the canvas
+		function draw(event) {
+			if (!painting) return;
+
+			ctx.lineWidth = 2;
+			ctx.lineCap = 'round';
+			ctx.strokeStyle = 'black';
+
+			ctx.lineTo(event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top);
+		}
+	</script>
+</body>
+
+</html>
