@@ -6,15 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./styles.css">
 	<title>Navigation Menu</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="./tailwind.config.js"></script>
+	<style type="text/tailwindcss">
+		@layer utilities {
+				.content-auto {
+					content-visibility: auto;
+				}
+			}
+		</style>
 </head>
 
 <body>
-	<div class="">
-		<h1 class="">
+	<div class="lg:content-auto m-20 px-10">
+		<h1 class="text-3xl font-bold text-heading">
 			Participants
 		</h1>
 		<nav>
-			<ul class="">
+			<ul class="underline text-link my-10">
 				<li><a href="./participants/chauchausoup/chauchausoup.html">chauchausoup</a></li>
 				<li><a href="./participants//signature-pad/signature-pad.html">Page 2</a></li>
 				<li><a href="#">Page 3</a></li>
