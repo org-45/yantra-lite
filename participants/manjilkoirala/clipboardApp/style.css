@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    padding: 50px 0;
+    align-items: center;
+    flex-direction: column;
+    
+     
+}
+
+.container h1{
+    margin-bottom:50px;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.container div input{
+   
+  font-size: 20px;
+  outline-color: rgb(5, 5, 76);
+  border-radius: 10px;
+  height: 40px;
+  padding: 2px;
+  
+ 
+  
+}
+
+button{
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+button:hover{
+    background-color: rgb(5, 5, 76);
+    color: white;
+    cursor: pointer;
+}
+
+.paste{
+    margin-top: 20px;
+}
+
+.boxes h2{
+    margin-top: 10px;
+    color: rgb(151, 7, 7);
+}
+
