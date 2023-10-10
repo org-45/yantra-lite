@@ -3,6 +3,8 @@ let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 randomPassword=document.getElementById('password');
 
 
+
+//Function for Random Password Generation of 8 Character
 const password=()=>{
     let pass='';
     for (let i = 1; i <= 8; i++) {
@@ -14,6 +16,7 @@ const password=()=>{
       return pass;
 }
 
+//Clipboard API Function for copy
 const  clipboardCopy= async()=>{
     
     
@@ -23,6 +26,8 @@ const  clipboardCopy= async()=>{
     
   
 }
+
+//Clipboard API Function for paste
 
 const clipboardPaste=async()=>{
     const write= await navigator.clipboard.readText()
