@@ -22,7 +22,7 @@ const  clipboardCopy= async()=>{
     
     await navigator.clipboard
   .writeText(randomPassword.value)
-  message.innerText="Copied"
+  message.innerText="Copied✅"
     
   
 }
@@ -32,6 +32,6 @@ const  clipboardCopy= async()=>{
 const clipboardPaste=async()=>{
     const write= await navigator.clipboard.readText()
     document.getElementById('paste').value=write
-    message.innerText="Pasted"
+    message.innerText="Pasted✅"
 
 }
