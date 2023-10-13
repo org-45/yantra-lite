@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<title>File System Access API Example</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<div id="fileList">
+		<!-- Select Multiple Files -->
+		<h2>Select Multiple Files:</h2>
+		<button id="openFileButton">Select Files</button>
+		<ul id="selectedFiles"></ul>
+
+		<!-- Save a Text File -->
+		<h2>Save a Text File:</h2>
+		<button id="saveFileButton">Save File</button>
+		<textarea id="fileContent" rows="6" cols="40"></textarea>
+
+		<!-- Select a Directory and List Contents -->
+		<h2>Select Directory and List Contents:</h2>
+		<button id="openDirectoryButton">Select Directory</button>
+		<div id="directoryContents">
+			<h3>Directory Contents:</h3>
+			<ul id="contentsList"></ul>
+		</div>
+
+		<!-- Create and Write to a File -->
+		<h2>Create and Write to a File:</h2>
+		<button id="createFileButton">Create and Write to File</button>
+		<div id="fileOperationStatus"></div>
+
+		<!-- Select Directory, Resolve, Create, and Write to a File -->
+		<h2>Select Directory, Resolve, Create, and Write to a File:</h2>
+		<button id="createFileButton2">Create and Write to File</button>
+		<div id="fileOperationStatus2"></div>
+	</div>
+	<script src="./file-system.js"></script>
+</body>
+
+</html>
