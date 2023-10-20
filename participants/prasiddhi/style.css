@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #4287f5;
+    margin: 0;
+}
+/* CSS styles for the header section */
+.header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-text {
+    font-size: 28px;
+    margin: 0;
+    opacity: 0; /* Initially, the text is hidden */
+    animation: fadeIn 1.5s ease-in-out 1s forwards; 
+    color:#4287f5/* Delayed fade-in animation */
+}
+.magic-8-ball {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative; /* For ball positioning */
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.answer {
+    margin: 20px 0;
+    font-size: 18px;
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+}
+
+button {
+    background-color: #4287f5;
+    color: #eef0f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ball {
+    background-color: #e2e3e2;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px; /* Initial position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.left-eye {
+    left: 25px;
+    top: 40px;
+}
+
+.right-eye {
+    left: 55px;
+    top: 40px;
+}
+
+.nose {
+    background-color: #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 45px;
+    top: 60px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
